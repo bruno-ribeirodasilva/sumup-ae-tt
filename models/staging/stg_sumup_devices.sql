@@ -13,7 +13,7 @@ source as (
 
     select
         *
-    from {{ ref('devices') }}
+    from {{ source('sumup_data', 'devices') }}
 
 )
 

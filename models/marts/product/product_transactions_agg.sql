@@ -12,11 +12,11 @@ with
 metrics as (
 
     select
-        , product_sku
+        product_sku
         , count(*)        as count_transactions
         , sum(amount_eur) as sum_amount_eur
-    from {{ ref('transactions_enriched') }}
-    group by 1, 2, 3
+    from {{ ref('fct_transactions_enriched') }}
+    group by 1
 
 )
 

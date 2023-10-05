@@ -16,7 +16,7 @@ metrics as (
         , device_type_id
         , count(*)        as count_transactions
         , sum(amount_eur) as sum_amount_eur
-    from {{ ref('transactions_enriched') }}
+    from {{ ref('fct_transactions_enriched') }}
     group by 1, 2
 
 )

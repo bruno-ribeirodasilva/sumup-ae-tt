@@ -9,11 +9,11 @@
 with
 
 
-transactions_enriched as (
+fct_transactions_enriched as (
 
     select 
         *
-    from {{ ref('transactions_enriched') }}
+    from {{ ref('fct_transactions_enriched') }}
 
 )
 
@@ -22,7 +22,7 @@ transactions_enriched as (
     select
         store_id,
         transaction_happened_at
-    from transactions_enriched
+    from fct_transactions_enriched
     where true
         and store_transaction_rank < 6
 
@@ -53,7 +53,7 @@ transactions_enriched as (
         , count(*)                          as count_transactions
         , sum(t.amount_eur)                 as sum_amount_eur
         , avg(t.amount_eur)                 as avg_amount_eur
-    from transactions_enriched t
+    from fct_transactions_enriched t
     left join time_to_five_transactions tt
         on t.store_id = tt.store_id
     group by 1, 2, 3, 4, 5, 6, 7, 8, 9

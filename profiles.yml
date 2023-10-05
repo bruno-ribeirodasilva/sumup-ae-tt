@@ -8,4 +8,4 @@ default:
       user: brunodasilva
       pass: None    
       dbname: sumup
-      schema: dwh
+      schema: public

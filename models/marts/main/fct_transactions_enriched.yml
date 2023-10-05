@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: transactions_enriched
+  - name: fct_transactions_enriched
     description: Table containing all sumup transactions enriched with all relevant dimensions. 
 
     columns:

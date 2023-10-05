@@ -13,7 +13,7 @@ source as (
 
     select
         *
-    from {{ ref('stores') }}
+    from {{ source('sumup_data', 'stores') }}
 
 )
 
