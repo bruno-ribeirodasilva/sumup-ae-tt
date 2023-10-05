@@ -43,6 +43,9 @@
 
 ## Project Data Model
 
+<p align="center">
+  <img src="/assets/data_model.png">
+</p>
 
 ## Project DAG
 
