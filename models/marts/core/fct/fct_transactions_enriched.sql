@@ -25,7 +25,7 @@ transactions as (
 
     select 
         *
-    from {{ ref('stg_sumup_stores') }}
+    from {{ ref('dim_stores') }}
 
 )
 
@@ -33,7 +33,7 @@ transactions as (
 
     select 
         *
-    from {{ ref('stg_sumup_devices') }}
+    from {{ ref('dim_devices') }}
 
 )
 
