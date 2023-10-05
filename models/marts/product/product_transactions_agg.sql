@@ -12,9 +12,7 @@ with
 metrics as (
 
     select
-        product_name
         , product_sku
-        , product_category_name
         , count(*)        as count_transactions
         , sum(amount_eur) as sum_amount_eur
     from {{ ref('transactions_enriched') }}

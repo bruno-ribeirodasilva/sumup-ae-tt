@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: device_transactions_agg
+    description: Table containing all sumup transactions enriched with all relevant dimensions. 
+
+    columns:
+      - name: device_id
+        description: Unique ID of a single transaction
+        tests:
+          - not_null
+          - unique

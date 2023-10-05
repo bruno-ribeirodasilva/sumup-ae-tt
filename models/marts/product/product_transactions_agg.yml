@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: product_transactions_agg
+    description: Table containing all sumup transactions enriched with all relevant dimensions. 
+
+    columns:
+      - name: product_sku
+        description: Unique ID of a single product
+        tests:
+          - not_null
+          - unique

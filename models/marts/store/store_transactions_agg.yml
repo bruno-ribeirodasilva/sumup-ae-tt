@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: store_transactions_agg
+    description: Table containing all sumup transactions enriched with all relevant dimensions. 
+
+    columns:
+      - name: store_id
+        description: Unique ID of a single store.
+        tests:
+          - not_null
+          - unique
