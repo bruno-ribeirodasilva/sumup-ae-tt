@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: stg_sumup_devices
+    description: Table containing all sumup devices. 
+
+    columns:
+      - name: device_id
+        description: Unique ID of a sumup device.
+        tests:
+          - not_null
+          - unique

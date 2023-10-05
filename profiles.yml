@@ -1,0 +1,11 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: brunodasilva
+      pass: None    
+      dbname: sumup
+      schema: dwh

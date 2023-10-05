@@ -1,0 +1,73 @@
+version: 2
+
+seeds:
+  - name: transactions
+    description: '{{ doc("transactions") }}'
+    
+    columns:
+      - name: id
+        description: >
+          Unique identifier of a transaction.
+        tests:
+          - not_null
+          - unique
+
+      - name: device_id
+        description: >
+          Unique identifier of the device used in the transaction.
+        tests:
+          - not_null
+
+      - name: product_name
+        description: >
+          Name of the product transacted.
+        tests:
+          - not_null
+
+      - name: product_sku
+        description: >
+          SKU of the product transacted.
+        tests:
+          - not_null
+
+      - name: category_name
+        description: >
+          Category of the product transacted.
+        tests:
+          - not_null
+
+      - name: amount
+        description: >
+          Amount in Euros transacted.
+        tests:
+          - not_null
+
+      - name: status
+        description: >
+          Status of the transaction.
+        tests:
+          - not_null
+
+      - name: card_number
+        description: >
+          Number of the card used in the transaction.
+        tests:
+          - not_null
+
+      - name: cvv
+        description: >
+          CVV of the card used in the transaction.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Timestamp of when the transaction was created.
+        tests:
+          - not_null
+
+      - name: happened_at
+        description: >
+          Timestamp of when the transaction actually happened.
+        tests:
+          - not_null
