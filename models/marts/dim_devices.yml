@@ -1,16 +1,16 @@
 version: 2
 models:
-  - name: stg_sumup_devices
+  - name: dim_devices
     description: Table containing all sumup devices. 
     columns:
-        - name: device_id
+        - name: id
           description: >
             Unique identifier of the device.
           tests:
             - not_null
             - unique
 
-        - name: device_type_id
+        - name: type
           description: >
             Unique identifier of the type of device.
           tests:

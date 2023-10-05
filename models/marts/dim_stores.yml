@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_sumup_stores
+  - name: dim_stores
     description: Table containing all sumup stores. 
 
     columns:
