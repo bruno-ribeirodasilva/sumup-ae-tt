@@ -8,12 +8,12 @@ with
 source as (
     select
         *
-    from {{ source('sumup_data', 'transactions') }}
+    from {{ ref('stg_sumup_transactions') }}
 )
 
 select
     distinct
         product_sku
         , product_name
-        , category_name
+        , product_category_name
 from source
